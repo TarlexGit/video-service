@@ -5,8 +5,8 @@ from .checks import data_verification
 class Collector:
     """Collect data from files folder"""
 
-    def __init__(self) -> None:
-        self.path = pathlib.Path("./files")
+    def __init__(self, path) -> None:
+        self.path = pathlib.Path(path)
         self.data_path = pathlib.Path.cwd() / self.path
         self.folders = {}
 
